@@ -26,8 +26,8 @@ Keys:
  - Ctrl-alt-up:    prev diary
  - Ctrl-alt-down:  next dirary
 
-Known problems:
- - Search (number of results, inline in diary)
+Known problems / todo:
+ - Search in all diaries (number of results, inline in diary)
  - check if filename has already been taken on save
 
 ## File format:
