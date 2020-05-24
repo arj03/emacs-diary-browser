@@ -1,6 +1,6 @@
 {
   "name": "emacs-diary-browser",
-  "description": "",
+  "description": "A org-mode like note talking tool",
   "version": "1.0.0",
   "homepage": "https://github.com/arj03/emacs-diary-browser",
   "repository": {
@@ -14,5 +14,5 @@
   },
   "scripts": {},
   "author": "arj",
-  "license": "beerware"
+  "license": "gplv3"
 }

@@ -12,27 +12,27 @@ like https://www.npmjs.com/search?q=http-server
 
 Keys:
  - alt-q:          auto indent
- - alt-w:          copy (must run from http://, not file://)
- - Ctrl-y:         paste (must run from http://, not file://)
- - Ctrl-enter:     new file
- - Ctrl-x Ctrl-f:  open file
- - Ctrl-x Ctrl-s:  save file
+ - alt-w:          copy
+ - Ctrl-y:         paste
+ - Ctrl-enter:     new diary
+ - Ctrl-x Ctrl-f:  open diary
+ - Ctrl-x Ctrl-s:  save diary
  - Ctrl-x Ctrl-l:  insert external link
  - Ctrl-x Ctrl-c:  toggle category
  - Ctrl-x Ctrl-d:  insert link to another diary
  - Ctrl-x Ctrl-r:  remove diary
  - Ctrl-s:         search
  - Enter on link:  open link
- - Ctrl-alt-up:    prev file
- - Ctrl-alt-down:  next file
+ - Ctrl-alt-up:    prev diary
+ - Ctrl-alt-down:  next dirary
 
 Known problems:
- - Search (number of results, inline in file)
+ - Search (number of results, inline in diary)
  - check if filename has already been taken on save
 
 ## File format:
 
-The filename is the header of the file with space replaced with underscore.
+The filename is the header of the diary with space replaced with underscore.
 
 ```
 # Header
