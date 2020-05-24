@@ -1,0 +1,62 @@
+#left {
+  width: 45%;
+  float: left;
+}
+
+.CodeMirror {
+  border: 1px solid black;
+  font-size: 1rem;
+  height: auto;
+}
+
+.cm-header-1 { font-size: 120%; }
+.cm-header-2 { font-size: 105%; }
+.cm-header-3 { font-size: 95%; }
+
+#config {
+  background-color: #fdfdfd;
+  color: #3c4043;
+  float: right;
+  margin-right: 25px;
+}
+
+#gitHeader {
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+#config input {
+  width: 300px;
+}
+
+#previousDiary {
+  background: #0C1021;
+  color: #F8F8F8;
+  padding-left: 1.1rem;
+  font-size: 13px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#status {
+  font-family: monospace;
+  padding-bottom: 0.2rem;
+}
+
+#categories {
+  padding-left: 1rem;
+}
+
+.categoryFilter {
+  font-weight: bold;
+  padding-right: 0.2rem;
+  cursor: pointer;
+}
+
+.categoryFilter.active {
+  color: green;
+}
+
+#filestatus {
+  float: right;
+}
