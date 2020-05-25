@@ -277,7 +277,7 @@ export async function save(cm, cb) {
 
   if (currentFilename != "" && filename != currentFilename) { // name change
     await moveFile(currentFilename, filename)
-    await gitremove(currentFilename)
+    await gitremove(currentFilename, "delete")
   }
 
   currentFilename = filename
@@ -349,7 +349,7 @@ function setFilesHeader() {
 }
 
 function openLatestFile() {
-  const sorted = Object.values(fileIndex).sort(x => -x.created)
+  const sorted = Object.values(fileIndex).sort((x, y) => y.created - x.created)
   if (sorted.length > 0) {
     const file = sorted[0]
     currentFilename = file.filename
