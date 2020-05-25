@@ -12,6 +12,9 @@ free to use and improve it.
 To run from your local machine you need to run it from a http-server
 like https://www.npmjs.com/search?q=http-server
 
+There is a [demo](https://between-two-worlds.dk/emacs-diary-browser/)
+you can visit if you want to try it out.
+
 Keys:
  - alt-q:          auto indent
  - alt-w:          copy
