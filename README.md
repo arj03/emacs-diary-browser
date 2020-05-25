@@ -1,5 +1,7 @@
 # Emacs diary browser
 
+![Screenshot of emacs diary browser][screenshot]
+
 Emacs diary browser is a offline first note taking tool running in the
 browser. It is inspired by Emacs and org-mode but uses a custom plain
 text format. Notes can be synced to a remote [git
@@ -44,3 +46,5 @@ Actual content <link> to another doc [Header]
 
 link: https://test.dk
 ```
+
+[screenshot]: assets/screenshot.jpg
