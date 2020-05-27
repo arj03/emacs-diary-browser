@@ -5,9 +5,10 @@
 Emacs diary browser is a offline first note taking tool running in the
 browser. It is inspired by Emacs and org-mode but uses a custom plain
 text format. Notes can be synced to a remote [git
-reposity](https://people.iola.dk/arj/2020/04/28/gitea-and-cors/). It
-is intended as a personal tool, if you find it useful as well you are
-free to use and improve it.
+reposity](https://people.iola.dk/arj/2020/04/28/gitea-and-cors/) and
+thus can be used on multiple devices. It is intended as a personal
+tool, if you find it useful as well you are free to use and improve
+it.
 
 To run from your local machine you need to run it from a http-server
 like https://www.npmjs.com/search?q=http-server
