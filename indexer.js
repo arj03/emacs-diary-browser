@@ -13,6 +13,11 @@ function setArray(arr, newArr) {
   newArr.forEach(function(v) { arr.push(v) })
 }
 
+function parseDate(str) {
+  return new Date(parseInt(str.substr(0,4)), parseInt(str.substr(5,2))-1, parseInt(str.substr(8,2)),
+                  parseInt(str.substr(11,2)), parseInt(str.substr(14,2)), parseInt(str.substr(17,2)))
+}
+
 function parseContent(content, filename) {
   const lines = content.split("\n")
 
@@ -30,8 +35,8 @@ function parseContent(content, filename) {
     title,
     filename,
     content,
-    created: new Date(lines[1].split(",")[0].substring(9)),
-    modified: new Date(lines[1].split(",")[1].substring(9)),
+    created: parseDate(lines[1].split(",")[0].substring(9)),
+    modified: parseDate(lines[1].split(",")[1].substring(11)),
     categories: lines[2].substring("categories: ".length).split(",").filter(x => x != ""),
     backlinks: [],
     links
