@@ -1,4 +1,6 @@
 import { fs, dir } from './files.js'
+import { indexFiles } from './indexer.js'
+import { loadfile } from './editor.js'
 
 function authData() {
   return {
@@ -40,6 +42,8 @@ document.getElementById('gitSave').onclick = function(ev) {
   saveUI('gitName')
   saveUI('gitEmail')
   saveUI('gitURL')
+
+  cloneRepo().then(indexFiles).then(loadfile)
 }
 
 function hideGitConfig() {

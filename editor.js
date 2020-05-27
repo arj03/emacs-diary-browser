@@ -380,14 +380,16 @@ function categoryClick(category) {
   setFilesHeader()
 }
 
-indexFiles().then(() => {
+export function loadfile() {
   if (Object.values(fileIndex).length > 0)
     openLatestFile()
   else
     insertEmptyDocument()
 
   updateHeader()
-})
+}
+
+indexFiles().then(loadfile)
 
 
 /*
