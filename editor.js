@@ -300,8 +300,12 @@ pull().then(() => {
   getCommits(1).then(commits => {
     const commit = commits[0].commit
     console.log(`last commit ${new Date(commit.author.timestamp * 1000)}, message: ${commit.message}`)
+
+    indexFiles().then(loadfile)
   })
 })
+
+indexFiles().then(loadfile)
 
 function h(tag, attrs, children) {
   var el = document.createElement(tag)
@@ -388,9 +392,6 @@ export function loadfile() {
 
   updateHeader()
 }
-
-indexFiles().then(loadfile)
-
 
 /*
 document.onkeydown = function(e) {
