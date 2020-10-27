@@ -1,5 +1,6 @@
 #left {
-  width: 45%;
+  width: 60%;
+  min-width: 1000px;  
   float: left;
 }
 
