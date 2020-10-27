@@ -76,7 +76,7 @@ function updatePrevious(sorted, i) {
 }
 
 function nextDiary(cm) {
-  const sorted = Object.values(fileIndex).sort(x => x.created)
+  const sorted = sortedFiles()
   if (sorted.length == 0) return
   let i = sorted.findIndex(x => x.filename == currentFilename) // FIXME: handle new file
   if (++i == sorted.length) i = 0
@@ -88,7 +88,8 @@ function nextDiary(cm) {
 }
 
 function previousDiary(cm) {
-  const sorted = Object.values(fileIndex).sort(x => x.created)
+  const sorted = sortedFiles()
+  console.log(Object.values(sorted).map(x => x.created))
   if (sorted.length == 0) return
   let i = sorted.findIndex(x => x.filename == currentFilename) // FIXME: handle new file
   if (--i < 0) i = sorted.length -1
@@ -352,8 +353,12 @@ function setFilesHeader() {
   overwriteHTML("filestatus", files + (files == 1 ? " file" : " files"))
 }
 
+function sortedFiles() {
+  return Object.values(fileIndex).sort((x, y) => y.created - x.created)
+}
+
 function openLatestFile() {
-  const sorted = Object.values(fileIndex).sort((x, y) => y.created - x.created)
+  const sorted = sortedFiles()
   if (sorted.length > 0) {
     const file = sorted[0]
     currentFilename = file.filename
